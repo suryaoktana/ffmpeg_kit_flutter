@@ -132,7 +132,7 @@ include them.
 </table>
 
 
-#### 5. Platform Support
+### 5. Platform Support
 
 The following table shows Android API level, iOS deployment target and macOS deployment target requirements in  
 `ffmpeg_kit_flutter_new` releases.
