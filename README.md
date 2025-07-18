@@ -1,5 +1,19 @@
+<div align="center">
 
-# FFmpegKit for Flutter [![pub](https://img.shields.io/badge/pub-2.0.0-blue)](https://pub.dev/packages/ffmpeg_kit_flutter_new) [![discord](https://img.shields.io/badge/discord-purple)](https://discord.gg/s2HCWep9)
+# FFmpegKit for Flutter. Full-GPL version.
+
+_Fork of the original FFmpeg Kit library to work with Android V2 bindings and Flutter 3+_
+
+<p align="center">
+  <a href="https://pub.dev/packages/ffmpeg_kit_flutter_new">
+     <img src="https://img.shields.io/badge/pub-2.0.0-blue?logo=dart" alt="pub">
+  </a>
+  <a href="https://discord.gg/8NVwykjA">
+    <img src="https://img.shields.io/discord/1387108888452665427?logo=discord&logoColor=white&label=Join+Us&color=blueviolet" alt="Discord">
+  </a>
+  <a href="https://buymeacoffee.com/sk3llo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="21" width="114"></a>
+</p>
+</div>
 
 ## Upgraded version of the original [Flutter FFmpegKit](https://github.com/arthenica/ffmpeg-kit/tree/main/flutter/flutter).
 
@@ -54,7 +68,72 @@ dependencies:
 
 NOTE: Android know issue:
 
-#### 4. Platform Support
+### 4. Packages
+
+There are eight different `ffmpeg-kit` packages:
+
+- [Minimal](https://pub.dev/packages/ffmpeg_kit_flutter_new_min)
+- Minimal-GPL
+- HTTPS
+- HTTPS-GPL
+- Audio
+- Video
+- Full
+- [Full-GPL](https://pub.dev/packages/ffmpeg_kit_flutter_new)
+
+Below you can see which system libraries and external libraries are enabled in each one of them.
+
+Please remember that some parts of `FFmpeg` are licensed under the `GPL` and only `GPL` licensed `ffmpeg-kit` packages
+include them.
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><sup>min</sup></th>
+<th align="center"><sup>min-gpl</sup></th>
+<th align="center"><sup>https</sup></th>
+<th align="center"><sup>https-gpl</sup></th>
+<th align="center"><sup>audio</sup></th>
+<th align="center"><sup>video</sup></th>
+<th align="center"><sup>full</sup></th>
+<th align="center"><sup>full-gpl</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><sup>external libraries</sup></td>
+<td align="center">-</td>
+<td align="center"><sup>vid.stab</sup><br><sup>x264</sup><br><sup>x265</sup><br><sup>xvidcore</sup></td>
+<td align="center"><sup>gmp</sup><br><sup>gnutls</sup></td>
+<td align="center"><sup>gmp</sup><br><sup>gnutls</sup><br><sup>vid.stab</sup><br><sup>x264</sup><br><sup>x265</sup><br><sup>xvidcore</sup></td>
+<td align="center"><sup>lame</sup><br><sup>libilbc</sup><br><sup>libvorbis</sup><br><sup>opencore-amr</sup><br><sup>opus</sup><br><sup>shine</sup><br><sup>soxr</sup><br><sup>speex</sup><br><sup>twolame</sup><br><sup>vo-amrwbenc</sup></td>
+<td align="center"><sup>dav1d</sup><br><sup>fontconfig</sup><br><sup>freetype</sup><br><sup>fribidi</sup><br><sup>kvazaar</sup><br><sup>libass</sup><br><sup>libiconv</sup><br><sup>libtheora</sup><br><sup>libvpx</sup><br><sup>libwebp</sup><br><sup>snappy</sup><br><sup>zimg</sup></td>
+<td align="center"><sup>dav1d</sup><br><sup>fontconfig</sup><br><sup>freetype</sup><br><sup>fribidi</sup><br><sup>gmp</sup><br><sup>gnutls</sup><br><sup>kvazaar</sup><br><sup>lame</sup><br><sup>libass</sup><br><sup>libiconv</sup><br><sup>libilbc</sup><br><sup>libtheora</sup><br><sup>libvorbis</sup><br><sup>libvpx</sup><br><sup>libwebp</sup><br><sup>libxml2</sup><br><sup>opencore-amr</sup><br><sup>opus</sup><br><sup>shine</sup><br><sup>snappy</sup><br><sup>soxr</sup><br><sup>speex</sup><br><sup>twolame</sup><br><sup>vo-amrwbenc</sup><br><sup>zimg</sup></td>
+<td align="center"><sup>dav1d</sup><br><sup>fontconfig</sup><br><sup>freetype</sup><br><sup>fribidi</sup><br><sup>gmp</sup><br><sup>gnutls</sup><br><sup>kvazaar</sup><br><sup>lame</sup><br><sup>libass</sup><br><sup>libiconv</sup><br><sup>libilbc</sup><br><sup>libtheora</sup><br><sup>libvorbis</sup><br><sup>libvpx</sup><br><sup>libwebp</sup><br><sup>libxml2</sup><br><sup>opencore-amr</sup><br><sup>opus</sup><br><sup>shine</sup><br><sup>snappy</sup><br><sup>soxr</sup><br><sup>speex</sup><br><sup>twolame</sup><br><sup>vid.stab</sup><br><sup>vo-amrwbenc</sup><br><sup>x264</sup><br><sup>x265</sup><br><sup>xvidcore</sup><br><sup>zimg</sup></td>
+</tr>
+<tr>
+<td align="center"><sup>android system libraries</sup></td>
+<td align="center" colspan=8><sup>zlib</sup><br><sup>MediaCodec</sup></td>
+</tr>
+<tr>
+<td align="center"><sup>ios system libraries</sup></td>
+<td align="center" colspan=8><sup>bzip2</sup><br><sup>AudioToolbox</sup><br><sup>AVFoundation</sup><br><sup>iconv</sup><br><sup>VideoToolbox</sup><br><sup>zlib</sup></td>
+</tr>
+<tr>
+<tr>
+<td align="center"><sup>macos system libraries</sup></td>
+<td align="center" colspan=8><sup>bzip2</sup><br><sup>AudioToolbox</sup><br><sup>AVFoundation</sup><br><sup>Core Image</sup><br><sup>iconv</sup><br><sup>OpenCL</sup><br><sup>OpenGL</sup><br><sup>VideoToolbox</sup><br><sup>zlib</sup></td>
+</tr>
+<tr>
+<td align="center"><sup>tvos system libraries</sup></td>
+<td align="center" colspan=8><sup>bzip2</sup><br><sup>AudioToolbox</sup><br><sup>iconv</sup><br><sup>VideoToolbox</sup><br><sup>zlib</sup></td>
+</tr>
+</tbody>
+</table>
+
+
+#### 5. Platform Support
 
 The following table shows Android API level, iOS deployment target and macOS deployment target requirements in  
 `ffmpeg_kit_flutter_new` releases.
@@ -79,7 +158,7 @@ The following table shows Android API level, iOS deployment target and macOS dep
   </tbody>  
 </table>  
 
-### 4. Using
+### 6. Using
 
 1. Execute FFmpeg commands.
 
