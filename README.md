@@ -66,7 +66,6 @@ dependencies:
  ffmpeg_kit_flutter_new: ^2.0.0
 ```
 
-NOTE: Android know issue:
 
 ### 4. Packages
 
